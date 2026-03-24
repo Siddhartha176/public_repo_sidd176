@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: orders_clean
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+      - name: status
+        tests:
+          - accepted_values:
+              values: ['pending','shipped','delivered','cancelled']
