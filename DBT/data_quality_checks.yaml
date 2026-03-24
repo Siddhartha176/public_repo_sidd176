@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: customers
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
+      - name: email
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['gmail.com','yahoo.com','outlook.com']
