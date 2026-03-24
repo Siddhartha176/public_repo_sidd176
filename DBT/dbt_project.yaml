@@ -1,0 +1,23 @@
+dbt_project.yml
+README.md
+models/
+    bronze/
+        events_incremental.sql
+        orders_incremental.sql
+    silver/
+        customers_clean.sql
+        orders_clean.sql
+    gold/
+        sales_summary.sql
+        customer_lifetime_value.sql
+macros/
+    generate_surrogate_key.sql
+    date_utils.sql
+tests/
+    schema_tests.yml
+    data_quality.sql
+seeds/
+    sample_orders.csv
+    sample_customers.csv
+sources/
+    sources.yml
